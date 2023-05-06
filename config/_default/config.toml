@@ -4,11 +4,14 @@ theme = '2023dark' # 테마
 baseURL = 'http://example.org/' # 기본 URL
 
 # 고급 설정
-disableKinds = ['RSS']
+disableKinds = ['RSS'] # RSS 비활성화
 languageCode = 'ko-KR' # 사이트 언어 설정 (자동번역 도움됨)
 defaultContentLanguage = 'ko' # 다국어 처리 기본값 언어
-rssLimit = 20 # RSS 피드 항목 제한
 timeZone = 'Asia/Seoul' # 시간대 설정
 hasCJKLanguage = true # CJK 언어 감지 (글자 갯수 셀때 도움됨)
 enableRobotsTXT = true # 크롤링 봇 허용 (SEO 검색 향상)
 enableInlineShortcodes = true # 인라인 단축코드 사용 (기본값 false, false시 단일 줄에서만 가능함)
+
+# 사이트 변수
+[params]
+brandName = "지진관측 채널 Jpn Kor Earthquake"

@@ -1,4 +1,8 @@
 {{ define "main" }}
-    <p>index</p>
-    {{ .Content }}
+    <!-- <p>이 테마는 블로그 형태가 아닙니다. _index.md를 index.md로 변경하십시오.</p> -->
+    <!-- html.validate.styles: false -->
+    <!-- TODO: 중복 코드 부분 템플릿으로 합치기 -->
+    <div id="content" style="{{ if isset .Params "center" }}text-align: center;{{ end }}">
+        {{ .Content }}
+    </div>
 {{ end }}

@@ -1,4 +1,5 @@
 {{ define "main" }}
-    <p>싱글 페이지</p>
-    {{ .Content }}
+    <div id="content" style="{{ if isset .Params "center" }}text-align: center;{{ end }}">
+        {{ .Content }}
+    </div>
 {{ end }}
