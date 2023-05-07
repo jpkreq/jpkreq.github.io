@@ -4,9 +4,45 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                {{ $t := .Site.GetPage "/posts" }}
-                {{ range $t.Pages }}
-                <li class="nav-item"><a class="nav-link" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ range $p := (.Site.GetPage "/").Pages }}
+                {{ if $p.IsPage }}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ $p.RelPermalink }}">
+                        {{ $p.Title }}
+                    </a>
+                </li>
+                {{ end }}
+                {{ end }}
+                {{ range $dir := (readDir "/content/") }}
+                {{ if $dir.IsDir }}
+                <li class="nav-item dropdown">
+                    {{ $front := false }}
+                    {{ with $.Site.GetPage (add $dir.Name "/front.md") }}
+                    {{ $front = .}}
+                    {{ end }}
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ with $front }}
+                        {{ .Title }}
+                        {{ else }}
+                        {{ $dir.Name }}
+                        {{ end}}
+                    </a>
+                    <ul class="dropdown-menu" data-bs-theme="dark">
+                        {{ with $front }}
+                        <li>
+                            <a class="dropdown-item" href="{{ .RelPermalink }}">{{ .Title }} 대문</a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        {{ end }}
+                        {{ range ($.Site.GetPage (add "/" $dir.Name)).Pages }}
+                        {{ if eq .File.LogicalName "front.md"}}{{ continue }}{{ end }}
+                        <li>
+                            <a class="dropdown-item" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </li>
+                {{ end }}
                 {{ end }}
             </ul>
         </div>

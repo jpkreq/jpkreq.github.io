@@ -15,3 +15,4 @@ enableInlineShortcodes = true # 인라인 단축코드 사용 (기본값 false, 
 # 사이트 변수
 [params]
 brandName = "지진관측 채널 Jpn Kor Earthquake"
+discordInviteURL = "https://discord.gg/RDrkKNnYC3"

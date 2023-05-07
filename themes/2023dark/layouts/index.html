@@ -4,5 +4,10 @@
     <!-- TODO: 중복 코드 부분 템플릿으로 합치기 -->
     <div id="content" style="{{ if isset .Params "center" }}text-align: center;{{ end }}">
         {{ .Content }}
+        {{ with .Site.GetPage (add "community" "/front.md") }}
+        <p>{{ printf "%#v" .IsPage }}</p>
+            {{ range .Pages }}
+            {{ end }}
+        {{ end }}
     </div>
 {{ end }}
