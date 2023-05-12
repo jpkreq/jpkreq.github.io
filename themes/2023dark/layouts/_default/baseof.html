@@ -2,7 +2,7 @@
 <html lang="{{ .Site.Language.Lang }}">
 <head>
     <meta charset="UTF-8">
-    <title>{{ .Site.Title }}{{ with .Params.title }} - {{ . }}{{ end }}</title>
+    <title>{{ with .Params.title }}{{ . }} - {{ end }}{{ .Site.Title }}</title>
     <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico" type="image/x-icon">
     {{- /* 기본 CSS */}}
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/basic.css">
