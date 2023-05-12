@@ -2,7 +2,7 @@
 title: "관련 웹사이트"
 date: 2023-05-06T17:33:41+09:00
 weight: 4
-draft: true
+draft: false
 ---
 # 재난 확인에 도움되는 웹사이트들
 

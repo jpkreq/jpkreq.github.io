@@ -4,7 +4,7 @@ date: 2023-05-06T17:33:22+09:00
 weight: 1
 noPeck: true
 center: true
-draft: true
+draft: false
 ---
 아래 최근 발생된 지진 정보를 확인해보세요.
 

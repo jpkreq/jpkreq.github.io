@@ -2,7 +2,7 @@
 title: "조직"
 date: 2023-05-12T04:21:49+09:00
 weight: 1
-draft: true
+draft: false
 ---
 # 조직
 

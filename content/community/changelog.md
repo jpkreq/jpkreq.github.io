@@ -2,7 +2,7 @@
 title: "서버 변화 내역"
 date: 2023-05-12T19:52:19+09:00
 weight: 2
-draft: true
+draft: false
 ---
 # 서버 변화 내역
 

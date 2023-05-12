@@ -2,7 +2,7 @@
 title: "프로그램 종류"
 date: 2023-05-06T17:33:51+09:00
 weight: 3
-draft: true
+draft: false
 ---
 # 지진관측에 도움되는 프로그램들
 

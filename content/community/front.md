@@ -10,7 +10,7 @@ links:
         name: "디스코드 서버"
         value: "{{<discordInviteURL>}}"
         weight: 2
-draft: true
+draft: false
 ---
 # 커뮤니티 대문
 
