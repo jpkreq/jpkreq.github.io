@@ -13,6 +13,9 @@ hasCJKLanguage = true # CJK 언어 감지 (글자 갯수 셀때 도움됨)
 enableRobotsTXT = true # 크롤링 봇 허용 (SEO 검색 향상)
 enableInlineShortcodes = true # 인라인 단축코드 사용 (기본값 false, false시 단일 줄에서만 가능함)
 
+[frontmatter]
+lastmod = [':fileModTime', ':default']
+
 # 사이트 변수
 [params]
 brandName = "지진관측 채널 Jpn Kor Earthquake"

@@ -4,60 +4,62 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                {{ range $p := (.Site.GetPage "/").Pages }}
-                {{ if $p.IsPage }}
+                {{ range $p := (.Site.GetPage "/").Pages -}}
+                {{ if $p.IsPage -}}
                 <li class="nav-item">
                     <a class="nav-link" href="{{ $p.RelPermalink }}">
-                        {{ .Title }}
+                        {{- .Title -}}
                     </a>
                 </li>
-                {{ end }}
-                {{ end }}
-                {{ range $dir := (readDir "/content/") }}
-                {{ if $dir.IsDir }}
+                {{ end -}}
+                {{ end -}}
+                {{ range $dir := (readDir "/content/") -}}
+                {{ if $dir.IsDir -}}
                 <li class="nav-item dropdown">
-                    {{ $front := false }}
-                    {{ with $.Site.GetPage (add $dir.Name "/front.md") }}
-                    {{ $front = . }}
-                    {{ end }}
+                    {{ $front := false -}}
+                    {{ with $.Site.GetPage (add $dir.Name "/front.md") -}}
+                    {{ $front = . -}}
+                    {{ end -}}
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ with $front }}
-                        {{ .Title }}
+                        {{- with $front -}}
+                        {{- .Title -}}
                         {{ else }}
-                        {{ $dir.Name }}
-                        {{ end }}
+                        {{- $dir.Name -}}
+                        {{ end -}}
                     </a>
                     <ul class="dropdown-menu" data-bs-theme="dark">
-                        {{ with $front }}
+                        {{ with $front -}}
                         <li>
                             <a class="dropdown-item" href="{{ .RelPermalink }}">
                                 {{ .Title }} 대문
                             </a>
                         </li>
                         <li><hr class="dropdown-divider"></li>
-                        {{ end }}
-                        {{ range ($.Site.GetPage (add "/" $dir.Name)).Pages }}
-                        {{ if eq .File.LogicalName "front.md"}}{{ continue }}{{ end }}
+                        {{ end -}}
+                        {{ range ($.Site.GetPage (add "/" $dir.Name)).Pages -}}
+                        {{ if eq .File.LogicalName "front.md"}}{{ continue }}{{ end -}}
                         <li>
                             <a class="dropdown-item" href="{{ .RelPermalink }}">
-                                {{ .Title }}
+                                {{- .Title -}}
                             </a>
                         </li>
-                        {{ end }}
-                        {{ with (index $front.Params "links") }}
+                        {{ end -}}
+                        {{ with $front -}}
+                        {{ with (index $front.Params "links") -}}
                         <li><hr class="dropdown-divider"></li>
-                        {{ range $v := (sort . "weight") }}
+                        {{ range $v := (sort . "weight") -}}
                         <li>    
                             <a class="dropdown-item" href="{{ if hasPrefix $v.value "http" }}{{ $v.value }}{{ else }}{{ $v.value | markdownify }}{{ end }}" target="_blank">
                                 {{ $v.name }}
                             </a>
                         </li>
-                        {{ end }}
-                        {{ end }}
+                        {{ end -}}
+                        {{ end -}}
+                        {{ end -}}
                     </ul>
                 </li>
-                {{ end }}
-                {{ end }}
+                {{ end -}}
+                {{ end -}}
             </ul>
         </div>
     </div>

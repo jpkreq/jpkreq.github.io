@@ -1,0 +1,3 @@
+{{ $img := resources.Get (.Get "src") }}
+{{ if .Get "width" }}{{ $img = $img.Resize (add (.Get "width") "x") }}{{ end }}
+<img src="{{ $img.RelPermalink }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }} {{ if .Get "width" }}width="{{ $img.Width }}" height="{{ $img.Height }}"{{ end }} />
