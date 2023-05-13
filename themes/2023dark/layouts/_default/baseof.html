@@ -15,10 +15,8 @@
     <meta name="theme-anthor" content="https://github.com/Jx2H">
 </head>
 <body>
-    <header>
-        {{ partial "header/header.html" . }}
-    </header>
     <div id="main" class="min-vh-100">
+        {{ partial "header/header.html" . }}
         {{ block "main" . }}    
         {{ end }}
     </div>
