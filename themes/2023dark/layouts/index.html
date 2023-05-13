@@ -1,6 +1,61 @@
 {{ define "main" }}
     <!-- html.validate.styles: false -->
-    <div style="text-align: center;">
-        <h1>와 메인!</h1>
+    <div id="home" class="justify-content-center">
+        {{ with resources.Get "images/home/banner.jpg" }}
+        <div class="px-4 py-5 text-center" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('{{ .RelPermalink }}');">
+        {{ end }}
+            <h1 class="display-5 fw-bold text-white">{{ index .Site.Params "brandName" }}</h1>
+            <div class="col-lg-6 mx-auto text-white">
+                <p class="lead mb-4">국내와 주변 국가에서 일어나고 있는 재난을 손쉽게 확인해 보세요.</p>
+            </div>
+        </div>
+        <div class="h-body py-4">
+            <div class="mb-3 text-center">
+                <h2>운영하고 있는 것들</h2>
+            </div>
+            <div class="h-card row justify-content-center me-0 mb-2">
+                <div class="card p-0 ms-3 mx-2 col-2 bg-dark text-white">
+                    {{ with resources.Get "images/home/broadcast_screen.jpg" }}
+                    {{ $img := .Resize "300x" }}
+                    {{ $img = $img.Crop "300x150 center" }}
+                    <img src="{{ $img.RelPermalink }}" class="card-img-top" alt="유튜브 지진관측 채널 방송 화면">
+                    {{ end }}
+                    <div class="card-body">
+                        <h5 class="card-title">실시간 방송</h5>
+                        <p class="card-text">라이브 스트리밍을 통해 간편하게 재난을 확인해보세요.</p>
+                        <a href="https://www.youtube.com/@jke" class="btn btn-primary" target="_blank">시청하기</a>
+                    </div>
+                </div>
+                <div class="card p-0 mx-1 col-2 bg-dark text-white">
+                    {{ with resources.Get "images/home/discord_server_snapshot.jpg" }}
+                    {{ $img := .Resize "300x" }}
+                    {{ $img = $img.Crop "300x150 center" }}
+                    <img src="{{ $img.RelPermalink }}" class="card-img-top" alt="디스코드 서버 화면">
+                    {{ end }}
+                    <div class="card-body">
+                        <h5 class="card-title">디스코드 서버</h5>
+                        <p class="card-text">커뮤니티 통해 정보를 공유하고 유저와 소통해 보세요!</p>
+                        <a href="{{ index .Site.Params "discordInviteURL" }}" class="btn btn-primary" target="_blank">서버 참여</a>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="flex-column px-5 py-5" style="background-color: #f4f4f4;">
+            <div class="text-center">
+                <h3>조직</h3>
+            </div>
+            <div class="mt-3 d-flex flex-row justify-content-center">
+                <div class="col-3 me-5">
+                    <p>우리는 여러 팀원과 함께 일을 합니다.</p>
+                    <p>{{ index .Site.Params "brandName" }}는 재난 관련 서비스를 운영하는 비영리 단체입니다.</p>
+                </div>
+                <div class="col-3">
+                    <p>{{ index .Site.Params "brandName" }}에서 함께 재난 관련 서비스에 기여하시거나 활동하시려면 디스코드 서버에서 참여하셔서 모집 기간에 신청해보세요!</p>
+                </div>
+            </div>
+            <div class="text-center mb-5">
+                <a href="{{ relref . "community/org.md" }}"><button>자세히 알아보기</button></a>
+            </div>
+        </div>
     </div>
 {{ end }}
