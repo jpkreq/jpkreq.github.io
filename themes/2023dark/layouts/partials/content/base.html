@@ -29,5 +29,8 @@
         {{ .TableOfContents }}
     </div>
     {{ end }}
+    <div class="position-fixed bottom-0 end-0 mb-3 me-5 btn-group" role="group">
+        <button type="button" class="btn btn-success" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">위로</button>
+    </div>
     {{ .Content }}
 </div>
