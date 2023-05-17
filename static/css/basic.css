@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -6,7 +8,7 @@
 }
 
 :root {
-    --bs-body-font-family: 'Pretendard-Regular', sans-serif !important;
+    --bs-body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Noto Sans KR", Helvetica, Arial,sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Pretendard-Regular" !important;
 }
 
 html {
