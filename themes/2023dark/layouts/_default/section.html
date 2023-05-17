@@ -6,7 +6,7 @@
     {{ partial "content/base.html" . -}}
     {{ with .Site.GetPage .RelPermalink -}}
     {{ if gt .Sections.Len 0 -}}
-    <div id="sub-section" class="row justify-content-center my-4">
+    <div id="sub-section" class="row justify-content-center my-4 me-0">
         <div class="peck m-0 p-0">
             <div>
                 <h4>하위 카테고리</h4>
