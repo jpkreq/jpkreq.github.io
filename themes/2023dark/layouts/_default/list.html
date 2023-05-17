@@ -1,4 +1,13 @@
 {{ define "main" }}
     <p>list</p>
     {{ .Content }}
+    <ul class="contents">
+        {{ range .RegularPages }}
+        <li>
+            <div>
+                {{ .Title }}
+            </div>
+        </li>
+        {{ end }}
+    </ul>
 {{ end }}

@@ -1,5 +1,3 @@
 {{ define "main" }}
-    <div id="content" {{ if not (isset .Params "nopeck") }}class="peck"{{ end }} {{ if isset .Params "center" }}style="text-align: center;"{{ end }}>
-        {{ .Content }}
-    </div>
+    {{ partial "content/base.html" . }}
 {{ end }}

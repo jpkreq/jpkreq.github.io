@@ -1,0 +1,46 @@
+{{ define "main" }}
+    <div class="px-4 py-5 text-center" style="background-color: #f4f4f4;">
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description | markdownify }}</p>
+    </div>
+    {{ partial "content/base.html" . -}}
+    {{ with .Site.GetPage .RelPermalink -}}
+    {{ if gt .Sections.Len 0 -}}
+    <div id="sub-section" class="row justify-content-center my-4">
+        <div class="peck m-0 p-0">
+            <div>
+                <h4>하위 카테고리</h4>
+            </div>
+            <ul>
+                {{ range .Sections }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end -}}
+            </ul>
+        </div>
+    </div>
+    {{ end -}}
+    {{ end -}}
+    <div id="section" class="d-flex flex-column align-items-center justify-content-center me-0 mt-3">
+        <div class="peck">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>제목</th>
+                        <th>생성일</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    {{ range .Paginator.Pages -}}
+                    <tr>
+                        <td class="col-8"><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+                        <td>{{ .Date.Format "2006-01-02 15:04" }}</td>
+                    </tr>
+                    {{ end -}}
+                </tbody>
+            </table>
+        </div>
+        <div class="justify-content-between">
+            {{- template "_internal/pagination.html" . -}}
+        </div>
+    </div>
+{{ end }}

@@ -10,7 +10,13 @@
 }
 
 html {
-    font-size: 18px !important;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 767px){
+    html {
+        font-size: 20pt;
+    }
 }
 
 nav.navbar {
@@ -22,6 +28,11 @@ nav.navbar {
     margin-top: 30px;
 }
 
-#content.peck {
-    width: 700px;
+
+.peck {
+    width: 700px !important;
+}
+
+#content-toc ul {
+    margin-bottom: 0px !important;
 }

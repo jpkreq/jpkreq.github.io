@@ -1,0 +1,17 @@
+<div id="content" class="{{ if not (isset .Params "nopeck") }}peck{{ end }}" {{ if isset .Params "center" }}style="text-align: center;"{{ end }}>
+    {{ if .IsPage }}
+    <div>
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}
+        <p class="mb-4">{{ . | markdownify }}</p>
+        {{ end }}
+    </div>
+    {{ end }}
+    {{ if gt .WordCount 400 }}
+    <div id="content-toc" class="col-8 my-3 p-2 border border-1 border-dark">
+        <h2>목차</h2>
+        {{ .TableOfContents }}
+    </div>
+    {{ end }}
+    {{ .Content }}
+</div>

@@ -61,7 +61,7 @@ Tip. 설치가 안 될 경우 `제어판` → `시계 및 국가` → `국가 �
 
 `사용자 맞춤형 지진정보서비스` 프로그램 버전. 부가적인 기능을 갖추고 있다.
 
-#### 주의
+### 주의
 
 Pews Client는 대한민국 기상청에서 배포 및 사용 금지 명령을 받은 적이 있음. 따라 사용하는데 책임은 본인에게 있음.
 
@@ -113,7 +113,7 @@ Pews Client는 대한민국 기상청에서 배포 및 사용 금지 명령을 �
 
 [바로가기](https://weathernews.jp/quake/html/urgentquake.html)
 
-#### The Last 10-Second for Alarm
+### The Last 10-Second for Alarm
 
 {{< img src="images/used-programs/l10s2.png" alt="" >}}
 
