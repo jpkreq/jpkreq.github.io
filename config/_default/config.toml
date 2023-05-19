@@ -21,6 +21,7 @@ lastmod = [':fileModTime', ':default']
 [params]
 brandName = "지진관측 채널 Jpn Kor Earthquake"
 discordInviteURL = "https://discord.gg/RDrkKNnYC3"
+orgEmail = "org@jpkreq.com"
 
 [markup]
 defaultMarkdownHandler = 'goldmark'

@@ -4,6 +4,14 @@ date: 2023-05-06T17:33:41+09:00
 weight: 4
 draft: false
 ---
+## 호야 - 재난방송 > 방재
+
+<iframe src="https://www.hoyadb.com/prepare.html" width="100%" height="500px"></iframe>
+
+[바로가기](https://www.hoyadb.com/prepare.html)
+
+방재 정보를 쉽고 빠르게 접근할 수 있도록 특별히 제작된 웹사이트입니다.
+
 ## 국가지진종합정보시스템 NECIS
 
 {{< img src="images/ref-webs/necis.png" width="700" alt="네시스 웹페이지 화면" >}}

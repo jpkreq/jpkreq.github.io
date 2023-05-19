@@ -1,18 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
+@import url('github-markdown-light.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-    --bs-body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Noto Sans KR", Helvetica, Arial,sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Pretendard-Regular" !important;
+    --bs-body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", Helvetica, Arial,sans-serif, "Apple Color Emoji", "Segoe UI Emoji" !important;
+
 }
 
 html {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 @media screen and (max-width: 767px){
@@ -22,7 +17,7 @@ html {
 }
 
 nav.navbar {
-    font-size: 1em !important;
+    font-size: 1rem !important;
 }
 
 #content {
@@ -30,11 +25,18 @@ nav.navbar {
     margin-top: 30px;
 }
 
-
 .peck {
-    width: 700px !important;
+    width: 880px !important;
 }
 
 #content-toc ul {
     margin-bottom: 0px !important;
+}
+
+#content-body {
+    font-size: 1rem;
+}
+
+#content-body p {
+    margin-left: 5px;
 }

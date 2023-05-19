@@ -1,7 +1,7 @@
 ---
 title: "2023년 상반기 서버 변화"
 date: 2023-05-16T16:42:06+09:00
-draft: true
+draft: false
 ---
 ## 개요
 
