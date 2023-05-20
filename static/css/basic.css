@@ -3,11 +3,7 @@
 
 :root {
     --bs-body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", Helvetica, Arial,sans-serif, "Apple Color Emoji", "Segoe UI Emoji" !important;
-
-}
-
-html {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 767px){
@@ -23,10 +19,11 @@ nav.navbar {
 #content {
     margin: 0 auto;
     margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .peck {
-    width: 880px !important;
+    width: 40% !important;
 }
 
 #content-toc ul {
