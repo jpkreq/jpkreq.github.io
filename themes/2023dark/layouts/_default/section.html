@@ -4,6 +4,7 @@
         <p>{{ .Description | markdownify }}</p>
     </div>
     {{ partial "content/base.html" . -}}
+    {{ if not (index .Params "headless") -}}
     {{ with .Site.GetPage .RelPermalink -}}
     {{ if gt .Sections.Len 0 -}}
     <div id="sub-section" class="row justify-content-center my-4 me-0">
@@ -43,4 +44,5 @@
             {{- template "_internal/pagination.html" . -}}
         </div>
     </div>
+    {{ end -}}
 {{ end }}
