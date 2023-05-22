@@ -37,3 +37,15 @@ nav.navbar {
 #content-body p {
     margin-left: 5px;
 }
+
+a.anchor-link {
+    margin-left: 10px;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: text-top;
+}
+
+.anchor-link > svg {
+    opacity: 0.5;
+    transform: scale(0.8);
+}
