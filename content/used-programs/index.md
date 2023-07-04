@@ -26,8 +26,6 @@ Tip. 설치가 안 될 경우 `제어판` → `시계 및 국가` → `국가 �
 
 {{< img src="images/used-programs/nyjq.png" width="700" alt="" >}}
 
-[바로가기](https://www.nyj36.xyz/nyjquake/)
-
 {{<brandName>}}의 팀원 중 한명이 자체 개발한 한국인 맞춤 지진관측 서비스.
 
 ---
