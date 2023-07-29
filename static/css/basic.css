@@ -6,9 +6,18 @@
     font-size: 20px;
 }
 
-@media screen and (max-width: 767px){
+	
+@media (max-width: 767px) {
     html {
-        font-size: 20pt;
+        font-size: 26px;
+    }
+
+    .peck {
+        width: 90% !important;
+    }
+
+    #content {
+        margin: 0 12px !important;
     }
 }
 
@@ -23,7 +32,7 @@ nav.navbar {
 }
 
 .peck {
-    width: 40% !important;
+    width: 50%;
 }
 
 #content-toc ul {
