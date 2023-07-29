@@ -9,7 +9,7 @@
 	
 @media (max-width: 767px) {
     html {
-        font-size: 26px;
+        font-size: 14px !important;
     }
 
     .peck {
