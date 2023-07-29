@@ -7,8 +7,8 @@
     {{ if not (index .Params "headless") -}}
     {{ with .Site.GetPage .RelPermalink -}}
     {{ if gt .Sections.Len 0 -}}
-    <div id="sub-section" class="row justify-content-center my-4 me-0">
-        <div class="peck m-0 p-0">
+    <div id="sub-section" class="d-flex flex-column align-items-center justify-content-center me-0 mt-3">
+        <div class="peck">
             <div>
                 <h4>하위 카테고리</h4>
             </div>
